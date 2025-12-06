@@ -25,7 +25,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+        Xieburou
       </h1>
       <a
         target="_blank"
@@ -41,21 +41,27 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         />
         <span class="sr-only">RSS Feed</span>
       </a>
-
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
+      <div class="gap-4 flex flex-col">
+            <p>
+              🔧 技术栈：React/Next.js | Node.js | web3 | Vue | Framer Motion ...
+            </p>
+            <p>
+              🤖 近期探索：LangChain · AI 集成 ·
+            </p>
+            <p>
+              🚀 关注领域：全栈开发 · AI · 用户体验
+            </p>
+      </div>
+     
       <p class="mt-2">
-        Read the blog posts or check
+        欢迎来到我的博客！
+        <!-- Read the blog posts or check
         <LinkButton
           class="underline decoration-dashed underline-offset-4 hover:text-accent"
           href="https://github.com/satnaing/astro-paper#readme"
         >
           README
-        </LinkButton> for more info.
+        </LinkButton> for more info. -->
       </p>
       {
         // only display if at least one social link is enabled
@@ -74,7 +80,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       featuredPosts.length > 0 && (
         <>
           <section id="featured" class="pt-12 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+            <h2 class="text-2xl font-semibold tracking-wide">精选</h2>
             <ul>
               {featuredPosts.map(data => (
                 <Card variant="h3" {...data} />
