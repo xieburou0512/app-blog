@@ -1,9 +1,22 @@
 services:
-  app:
-    image: node:lts
+  blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: app-blog:latest
+    container_name: app-blog
+    restart: unless-stopped
     ports:
-      - 4321:4321
-    working_dir: /app
-    command: npm run dev -- --host 0.0.0.0
-    volumes:
-      - ./:/app
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - blog-network
+    # 可选：添加卷映射用于日志或其他持久化数据
+    # volumes:
+    #   - ./logs:/app/logs
+
+networks:
+  blog-network:
+    driver: bridge

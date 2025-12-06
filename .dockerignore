@@ -1,8 +1,22 @@
-# Ignore Astro files
-*.astro
-
-# Ignore node_modules directory
-node_modules/
-
-# Ignore build output
-dist/
+node_modules
+dist
+.git
+.gitignore
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.cache
+.astro
+README.md
+docker-compose.yml
+Dockerfile
