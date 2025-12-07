@@ -1,16 +1,16 @@
 ---
-title: Next.js 15+ Turbopack 环境下集成 Lingui 的正确方式
+title: Next.js 16+ Turbopack 环境下集成 Lingui 的正确方式
 author: xieburou
 pubDatetime: 2025-12-07T12:00:00Z
 slug: nextjs-lingui-turbopack-setup
-featured: false
+featured: true
 draft: false
 tags:
   - Next.js
   - Lingui
   - Turbopack
   - i18n
-description: Next.js 15+ 默认使用 Turbopack 替代 Webpack，导致 Lingui 官方示例失效。本文提供完整的适配方案。
+description: Next.js 16+ 默认使用 Turbopack 替代 Webpack，导致 Lingui 官方示例失效。本文提供完整的适配方案。
 ---
 
 Next.js 15+ 版本默认采用 Turbopack 作为构建工具，Lingui 官方文档中的 Webpack 配置示例已不再适用。本文将介绍如何在新版 Next.js 中正确集成 Lingui 国际化方案。
@@ -340,4 +340,4 @@ bun i18n:extract
 
 ## 总结
 
-通过以上配置，你可以在 Next.js 15+ 的 Turbopack 环境中顺利使用 Lingui 进行国际化开发。关键改动在于 `next.config.ts` 中需要使用 `turbopack.rules` 替代原来的 Webpack loader 配置。
+通过以上配置，你可以在 Next.js 16+ 的 Turbopack 环境中顺利使用 Lingui 进行国际化开发。关键改动在于 `next.config.ts` 中需要使用 `turbopack.rules` 替代原来的 Webpack loader 配置。
